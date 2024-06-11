@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Layout.MainPage">
+
+    <ScrollView HorizontalOptions="Center">
+        <FlexLayout BackgroundColor="Black" WidthRequest="310" HeightRequest="400" Direction="Row" Wrap="Wrap" HorizontalOptions="Center">
+            <Grid WidthRequest="300" HeightRequest="150" HorizontalOptions="Center" Margin="5">
+                <Label Grid.Row="0" Grid.Column="0" Text="HEIGHT" TextColor="Gray" FontSize="16" HorizontalTextAlignment="Center" ></Label>
+                <Label Grid.Row="1" Grid.Column="0" x:Name="height" TextColor="White" Padding="20" FontSize="18" FontAttributes="Bold" Margin="10" HorizontalTextAlignment="Center"></Label>
+                <Slider Grid.Row="2" Grid.Column="0" x:Name="range" Minimum="0" Maximum="200" ValueChanged="range_ValueChanged" ></Slider>
+            </Grid>
+
+            <Grid WidthRequest="140" HeightRequest="150" HorizontalOptions="FillAndExpand" ColumnSpacing="20">
+                <Label Grid.Row="0" Grid.Column="0" Text="WEIGHT" TextColor="Gray" FontSize="14" HorizontalTextAlignment="Center" ></Label>
+                <Label Grid.Row="1" Grid.Column="0" Text="60" x:Name="weight" Padding="20" TextColor="White" FontSize="25" HorizontalTextAlignment="Center" FontAttributes="Bold"></Label>
+                <StackLayout Grid.Row="2" Grid.Column="0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Button Text="+" TextColor="White" BackgroundColor="Gray" CornerRadius="45" WidthRequest="40" HeightRequest="40" Clicked="Button_Clicked"  FontSize="14" ></Button>
+                    <Button Text="-" TextColor="White" BackgroundColor="Gray" CornerRadius="45" WidthRequest="40" HeightRequest="40" Clicked="Button_Clicked_1"  FontSize="14"></Button>
+                </StackLayout>
+            </Grid>
+
+            <Grid WidthRequest="140" HeightRequest="150" HorizontalOptions="FillAndExpand" ColumnSpacing="20">
+                <Label Grid.Row="0" Grid.Column="0" Text="AGE" TextColor="Gray"  FontSize="14" HorizontalTextAlignment="Center" ></Label>
+                <Label Grid.Row="1" Grid.Column="0" Text="28" x:Name="age" Padding="20" TextColor="White" FontSize="25" HorizontalTextAlignment="Center" FontAttributes="Bold"></Label>
+                <StackLayout Grid.Row="2" Grid.Column="0" Orientation="Horizontal" HorizontalOptions="Center">
+                    <Button Text="+" TextColor="White" BackgroundColor="Gray" CornerRadius="45" WidthRequest="40" HeightRequest="40" Clicked="Button_Clicked_2"  FontSize="14"></Button>
+                    <Button Text="-" TextColor="White" BackgroundColor="Gray" CornerRadius="45" WidthRequest="40" HeightRequest="40" Clicked="Button_Clicked_3"  FontSize="14"></Button>
+                </StackLayout>
+            </Grid>
+        </FlexLayout>
+    </ScrollView>
+
+</ContentPage>
