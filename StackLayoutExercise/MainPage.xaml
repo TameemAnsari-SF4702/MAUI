@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StackLayoutExercise.MainPage">
+
+    <VerticalStackLayout WidthRequest="310">
+
+        <HorizontalStackLayout>
+            <Label Text="Bill" WidthRequest="110"/>
+            <Entry x:Name="billInput" Placeholder="Enter Amount" Keyboard="Numeric" />
+        </HorizontalStackLayout>
+                        
+        <HorizontalStackLayout>
+            <Label Text="Tip" WidthRequest="110"/>
+            <Label x:Name="tipOutput" Text="0.00"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <Label Text="Total" WidthRequest="110"/>
+            <Label x:Name="totalOutput" Text="0.00" />
+        </HorizontalStackLayout>
+        
+        <HorizontalStackLayout>
+            <Label Text="Tip Percentage" WidthRequest="110"/>
+            <Label x:Name="tipPercent" Text="15%" />
+        </HorizontalStackLayout>
+        
+        <Slider x:Name="tipPercentSlider" Minimum="0" Maximum="110" Value="15" />
+
+        <HorizontalStackLayout Padding="10" Spacing="10">
+            <Button Text="15%" Clicked="Button_Clicked" WidthRequest="140"/>
+            <Button Text="20%" Clicked="Button_Clicked_1" WidthRequest="140"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Padding="10" Spacing="10">
+            <Button x:Name="roundDown" Text="Round Down" WidthRequest="140"/>
+            <Button x:Name="roundUp"   Text="Round Up" WidthRequest="140"/>
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+
+</ContentPage>

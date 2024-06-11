@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GridExercise.MainPage">
+
+
+   
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Bill" Grid.Row="0" Grid.Column="0" />
+            <Entry x:Name="billInput" Grid.Row="0" Grid.Column="1" Placeholder="Enter Amount" Keyboard="Numeric" />
+
+            <Label Text="Tip" Grid.Row="1" Grid.Column="0"  />
+            <Label x:Name="tipOutput" Text="0.00" Grid.Row="1" Grid.Column="1"  />
+
+            <Label Text="Total" Grid.Row="2" Grid.Column="0"  />
+            <Label x:Name="totalOutput" Text="0.00" Grid.Row="2" Grid.Column="1" />
+       
+            <Label Text="Tip Percentage" Grid.Row="3" Grid.Column="0"  VerticalOptions="End"/>
+            <Label x:Name="tipPercent" Text="15%" Grid.Row="3" Grid.Column="1" HorizontalOptions="End" />
+            <Slider x:Name="tipPercentSlider" Minimum="0" Maximum="100" Value="15" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" />
+
+            <Button Text="15%" Grid.Row="5" Margin="5" Grid.Column="0"  />
+            <Button Text="20%" Grid.Row="5" Margin="5" Grid.Column="1"  />
+
+            <Button x:Name="roundDown" Text="Round Down" Margin="5" Grid.Row="6" Grid.Column="0"  />
+            <Button x:Name="roundUp"   Text="Round Up" Margin="5" Grid.Row="6" Grid.Column="1"  />
+        </Grid>
+
+   
+
+
+
+
+</ContentPage>
